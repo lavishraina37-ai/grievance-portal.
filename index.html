@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Government Smart School Grievance Portal">
+  <title>Resolve | Smart School Grievance Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#dashboard" aria-label="Resolve home">
+        <span class="brand-mark">R</span>
+        <span><strong>resolve</strong><small>SMART SCHOOL PORTAL</small></span>
+      </a>
+      <div class="profile-mini">
+        <span class="avatar">AS</span>
+        <span><strong id="profile-name">Aarav Sharma</strong><small id="profile-role">Student account</small></span>
+        <button class="icon-button" id="profile-menu" aria-label="Open profile menu">•••</button>
+      </div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <p class="nav-label">Workspace</p>
+        <a href="#dashboard" data-view="dashboard" class="nav-item active"><span class="nav-icon">⌂</span>Overview</a>
+        <a href="#complaints" data-view="complaints" class="nav-item"><span class="nav-icon">▤</span>My grievances <b class="nav-count">3</b></a>
+        <a href="#submit" data-view="submit" class="nav-item"><span class="nav-icon">＋</span>Submit grievance</a>
+        <a href="#notifications" data-view="notifications" class="nav-item"><span class="nav-icon">◔</span>Notifications <b class="nav-count alert-count">2</b></a>
+        <p class="nav-label">Insights</p>
+        <a href="#reports" data-view="reports" class="nav-item"><span class="nav-icon">▥</span>Reports</a>
+        <a href="#help" data-view="help" class="nav-item"><span class="nav-icon">?</span>Help centre</a>
+      </nav>
+      <div class="sidebar-footer"><span class="status-dot"></span><span>Portal services online</span><button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">☼</button></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div><p class="eyebrow">GOVERNMENT SMART SCHOOL GRIEVANCE PORTAL</p><h1 id="page-title">Good morning, Aarav</h1></div>
+        <div class="top-actions"><button class="role-switcher" id="role-switcher"><span class="role-dot"></span><span id="active-role">Student view</span><span>⌄</span></button><button class="notification-button" data-view-link="notifications" aria-label="View notifications">♧<span></span></button><button class="user-avatar">AS</button></div>
+      </header>
+
+      <div id="toast" class="toast" role="status"></div>
+      <section id="view-dashboard" class="view active-view" aria-labelledby="page-title">
+        <div class="welcome-grid">
+          <div class="welcome-card"><div><p class="eyebrow warm">YOUR VOICE MATTERS</p><h2>Make school better,<br><em>one report at a time.</em></h2><p>Raise a concern, follow its progress, and help your school community improve.</p><a class="primary-button" href="#submit">Submit a grievance <span>↗</span></a></div><div class="signal-art"><span class="signal-ring ring-one"></span><span class="signal-ring ring-two"></span><span class="signal-core">✦</span></div></div>
+          <div class="quick-card"><div class="section-heading"><div><p class="eyebrow">QUICK ACTION</p><h3>What would you like to do?</h3></div><span class="spark">✦</span></div><a class="quick-action" href="#submit"><span class="action-icon coral">＋</span><span><strong>Raise a new grievance</strong><small>Share an issue with the right team</small></span><b>→</b></a><a class="quick-action" href="#complaints"><span class="action-icon blue">⌁</span><span><strong>Track an existing grievance</strong><small>See updates and resolution progress</small></span><b>→</b></a></div>
+        </div>
+        <div class="section-heading overview-heading"><div><p class="eyebrow">YOUR OVERVIEW</p><h3>Grievance activity</h3></div><a class="text-link" href="#complaints">View all grievances <span>→</span></a></div>
+        <div class="metric-grid"><article class="metric-card"><div class="metric-top"><span class="metric-icon coral">▤</span><span class="trend up">↑ 12%</span></div><strong>03</strong><span>Total grievances</span></article><article class="metric-card"><div class="metric-top"><span class="metric-icon amber">◷</span><span class="trend neutral">on track</span></div><strong>01</strong><span>In progress</span></article><article class="metric-card"><div class="metric-top"><span class="metric-icon green">✓</span><span class="trend up">resolved</span></div><strong>02</strong><span>Resolved this term</span></article><article class="metric-card"><div class="metric-top"><span class="metric-icon purple">◌</span><span class="trend neutral">avg. 3.2 days</span></div><strong>04</strong><span>Days to resolution</span></article></div>
+        <div class="dashboard-lower"><article class="panel activity-panel"><div class="panel-header"><div><p class="eyebrow">RECENT ACTIVITY</p><h3>Latest grievances</h3></div><button class="dots">•••</button></div><div id="recent-list"></div></article><article class="panel progress-panel"><div class="panel-header"><div><p class="eyebrow">RESOLUTION HEALTH</p><h3>Progress this term</h3></div><span class="progress-percent">68%</span></div><div class="progress-chart"><div class="chart-grid"><span style="height:42%"></span><span style="height:57%"></span><span style="height:51%"></span><span style="height:74%"></span><span style="height:66%"></span><span style="height:88%"></span><span style="height:78%"></span><span style="height:96%"></span></div></div><div class="chart-legend"><span><i class="legend-dot"></i>Resolved</span><span>Aug 18 <b>—</b> Sep 23</span></div></article></div>
+      </section>
+
+      <section id="view-complaints" class="view" aria-labelledby="complaints-title"><div class="section-heading page-section-heading"><div><p class="eyebrow">CASE MANAGEMENT</p><h2 id="complaints-title">My grievances</h2><p class="section-copy">Every concern has a path to resolution.</p></div><a class="primary-button" href="#submit">＋ New grievance</a></div><div class="filter-bar"><div class="search-box">⌕ <input id="search-input" placeholder="Search by ID or subject" aria-label="Search grievances"></div><div class="filter-tabs"><button class="filter-tab active" data-filter="all">All <b>3</b></button><button class="filter-tab" data-filter="In progress">In progress <b>1</b></button><button class="filter-tab" data-filter="Resolved">Resolved <b>2</b></button></div></div><div class="table-wrap"><table><thead><tr><th>Grievance</th><th>Category</th><th>Submitted</th><th>Status</th><th>Owner</th><th></th></tr></thead><tbody id="complaints-table"></tbody></table></div></section>
+
+      <section id="view-submit" class="view" aria-labelledby="submit-title"><div class="section-heading page-section-heading"><div><p class="eyebrow">NEW CASE</p><h2 id="submit-title">Submit a grievance</h2><p class="section-copy">Tell us what happened. We will make sure it reaches the right people.</p></div><div class="step-indicator"><span class="current">01</span><span></span><span>02</span><span></span><span>03</span></div></div><form id="grievance-form" class="form-layout"><div class="panel form-panel"><label>What is your grievance about? <span>*</span><select id="category" required><option value="">Select a category</option><option>Facilities &amp; infrastructure</option><option>Academic support</option><option>Safety &amp; wellbeing</option><option>Transport</option><option>Other</option></select></label><label>Give your grievance a short title <span>*</span><input id="subject" required placeholder="e.g. Water dispenser not working in Block B"></label><label>Describe the issue <span>*</span><textarea id="description" required rows="6" placeholder="Please include useful details such as location, dates, and people involved."></textarea><div class="form-footnote"><span>⌁ Your identity is protected under the school grievance policy.</span><span id="char-count">0 / 1000</span></div></div><aside class="form-aside"><div class="info-card"><span class="info-icon">✦</span><h3>What happens next?</h3><ol><li><b>Submitted</b><small>Your grievance is securely recorded.</small></li><li><b>Under review</b><small>An appropriate school official checks the details.</small></li><li><b>Resolution</b><small>You receive updates until the issue is closed.</small></li></ol></div><button class="primary-button full-width" type="submit">Submit grievance <span>↗</span></button><p class="form-note">By submitting, you confirm these details are accurate.</p></aside></form></section>
+
+      <section id="view-notifications" class="view" aria-labelledby="notifications-title"><div class="section-heading page-section-heading"><div><p class="eyebrow">KEEPING YOU INFORMED</p><h2 id="notifications-title">Notifications</h2><p class="section-copy">Updates from your grievance journey.</p></div><button class="text-button" id="mark-read">Mark all as read</button></div><div id="notification-list" class="notification-list"></div></section>
+      <section id="view-reports" class="view" aria-labelledby="reports-title"><div class="section-heading page-section-heading"><div><p class="eyebrow">INSIGHTS &amp; ACCOUNTABILITY</p><h2 id="reports-title">Reports</h2><p class="section-copy">A transparent view of grievance resolution across the portal.</p></div><button class="secondary-button" id="export-report">⇩ Export report</button></div><div class="report-grid"><article class="report-stat"><span>All open cases</span><strong>24</strong><small>Across 12 schools <i class="up">↑ 8%</i></small></article><article class="report-stat"><span>Resolution rate</span><strong>82<span>%</span></strong><small>Up from 76% last month <i class="up">↑ 6%</i></small></article><article class="report-stat"><span>Average response</span><strong>3.2<span>d</span></strong><small>Target is under 5 days <i class="up">on target</i></small></article></div><article class="panel report-panel"><div class="panel-header"><div><p class="eyebrow">CASE VOLUME</p><h3>Grievances by category</h3></div><select class="small-select"><option>Last 30 days</option><option>This term</option></select></div><div class="bar-chart"><div><span>Facilities</span><i><b style="width:82%"></b></i><strong>18</strong></div><div><span>Academic</span><i><b style="width:63%"></b></i><strong>14</strong></div><div><span>Safety</span><i><b style="width:44%"></b></i><strong>09</strong></div><div><span>Transport</span><i><b style="width:26%"></b></i><strong>05</strong></div></div></article></section>
+      <section id="view-help" class="view" aria-labelledby="help-title"><div class="section-heading page-section-heading"><div><p class="eyebrow">SUPPORT</p><h2 id="help-title">Help centre</h2><p class="section-copy">Answers for raising and tracking a grievance.</p></div></div><div class="help-grid"><article class="help-card"><span>01</span><h3>What counts as a grievance?</h3><p>A grievance is a concern about school services, facilities, safety, academic support, or any issue affecting your learning experience.</p></article><article class="help-card"><span>02</span><h3>How quickly will I get a response?</h3><p>Your grievance is reviewed within two working days. You can follow every status change from the My grievances page.</p></article><article class="help-card"><span>03</span><h3>Need confidential support?</h3><p>For urgent safety concerns, contact your school administrator directly or use the emergency support number provided by your school.</p></article></div></section>
+    </main>
+  </div>
+  <div id="role-modal" class="modal-backdrop" hidden><div class="role-modal"><button class="modal-close" id="close-modal">×</button><p class="eyebrow">VIEW AS</p><h2>Choose a portal role</h2><p>Switch perspective to preview each workflow.</p><div class="role-options"><button data-role="Student" data-name="Aarav Sharma" data-initials="AS">Student <small>Submit and track grievances</small></button><button data-role="Teacher" data-name="Meera Nair" data-initials="MN">Teacher <small>View assigned cases</small></button><button data-role="School Administrator" data-name="Rohan Verma" data-initials="RV">School administrator <small>Review and resolve cases</small></button><button data-role="Government Official" data-name="Kavya Iyer" data-initials="KI">Government official <small>View reports and trends</small></button></div></div></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+
+# Local PHP and database files
+*.log
+*.sql.gz
+
+# Operating system files
+.DS_Store
+Thumbs.db
